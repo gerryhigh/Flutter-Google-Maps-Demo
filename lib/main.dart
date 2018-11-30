@@ -3,7 +3,6 @@ import 'package:maps_demo/venues.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 void main() {
-  GoogleMapController.init();
   runApp(new MyApp());
 }
 
@@ -11,7 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Google Maps Demo',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
@@ -41,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: new AppBar(
           title: new Text(widget.title),
         ),
-        //backgroundColor: Colors.lightGreenAccent,
         body: Center(
           child: Column(children: <Widget>[
             Padding(
@@ -54,8 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   minWidth: 200.0,
                   height: 42.0,
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute<void>(
-                        builder: (context) => Venues()));
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => new Venues()));
+                    //Navigator.of(context).pushNamed(HomePage.tag);
                   },
                   color: Colors.lightBlueAccent,
                   child: Text('Venues', style: TextStyle(color: Colors.white)),

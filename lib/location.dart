@@ -9,17 +9,5 @@ class Location {
   String state;
   String zip;
   String phone;
-  String imageUrl;
-  Location(
-      {this.id,
-      this.name,
-      this.lat,
-      this.long,
-      this.address1,
-      this.address2,
-      this.city,
-      this.state,
-      this.zip,
-      this.phone,
-      this.imageUrl});
+  Location({this.id, this.name, this.lat, this.long, this.address1, this.address2, this.city, this.state, this.zip, this.phone});
 }
