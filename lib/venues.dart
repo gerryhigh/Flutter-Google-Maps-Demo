@@ -32,7 +32,9 @@ class _GoogleMaps extends State<GoogleMaps> {
         address1: 'Bennelong Point',
         address2: 'Sydney NSW 2000, Australia',
         lat: '-33.856159',
-        long: '151.215256');
+        long: '151.215256',
+        imageUrl:
+            'https://www.planetware.com/photos-large/AUS/australia-sydney-opera-house-2.jpg');
     locations.add(location);
     location = Location(
         id: 2,
@@ -40,7 +42,9 @@ class _GoogleMaps extends State<GoogleMaps> {
         address1: '',
         address2: 'Sydney NSW, Australia',
         lat: '-33.857013',
-        long: '151.207694');
+        long: '151.207694',
+        imageUrl:
+            'https://www.planetware.com/photos-large/AUS/australia-sydney-harbour-bridge.jpg');
     locations.add(location);
     super.initState();
   }

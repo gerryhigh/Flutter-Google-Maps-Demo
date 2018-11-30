@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:maps_demo/venues.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 void main() {
   runApp(new MyApp());
@@ -55,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         context,
                         new MaterialPageRoute(
                             builder: (context) => new Venues()));
-                    //Navigator.of(context).pushNamed(HomePage.tag);
                   },
                   color: Colors.lightBlueAccent,
                   child: Text('Venues', style: TextStyle(color: Colors.white)),
