@@ -42,22 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(children: <Widget>[
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                borderRadius: BorderRadius.circular(30.0),
-                shadowColor: Colors.lightBlueAccent.shade100,
-                elevation: 5.0,
-                child: MaterialButton(
-                  minWidth: 200.0,
-                  height: 42.0,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => new Venues()));
-                  },
-                  color: Colors.lightBlueAccent,
-                  child: Text('Venues', style: TextStyle(color: Colors.white)),
-                ),
+              child: RaisedButton(
+                child: const Text('Venues', semanticsLabel: 'Venues'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new Venues()));
+                },
               ),
             ),
           ]),

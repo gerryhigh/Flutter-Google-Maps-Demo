@@ -28,7 +28,7 @@ class _VenueDetailState extends State<VenueDetails> {
     super.dispose();
   }
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
@@ -67,20 +67,12 @@ class _VenueDetailState extends State<VenueDetails> {
                       'LAT: ${widget.location.lat} LON: ${widget.location.long}',
                       style: new TextStyle(fontSize: 16.0)),
                 ),
-                Material(
-                  borderRadius: BorderRadius.circular(30.0),
-                  shadowColor: Colors.lightBlueAccent.shade100,
-                  elevation: 5.0,
-                  child: MaterialButton(
-                    minWidth: 200.0,
-                    height: 42.0,
-                    onPressed: _launchNavigationInGoogleMaps,
-                    //Navigator.of(context).pushNamed(HomePage.tag);
-                    color: Colors.lightBlueAccent,
-                    child: Text('Directions',
-                        style: TextStyle(color: Colors.white)),
-                  ),
-                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    child: RaisedButton(
+                          child: const Text('Directions', semanticsLabel: 'Directions'),
+                          onPressed: _launchNavigationInGoogleMaps),
+                    ),
                 Image.network(
                   widget.location.imageUrl,
                   width: 300.0,
